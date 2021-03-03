@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="107fbfb0-dc69-43b5-8d10-e9e012b01b9e" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <pharConfigPath>$PROJECT_DIR$/zerobug/composer.json</pharConfigPath>
+    <execution />
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration">
+    <include_path>
+      <path value="$PROJECT_DIR$/zerobug/vendor/doctrine/persistence" />
+      <path value="$PROJECT_DIR$/zerobug/vendor/doctrine/migrations" />
+      <path value="$PROJECT_DIR$/zerobug/vendor/friendsofphp/proxy-manager-lts" />
+      <path value="$PROJECT_DIR$/zerobug/vendor/doctrine/sql-formatter" />
+      <path value="$PROJECT_DIR$/zerobug/vendor/phpdocumentor/type-resolver" />
+      <path value="$PROJECT_DIR$/zerobug/vendor/phpdocumentor/reflection-common" />
+      <path value="$PROJECT_DIR$/zerobug/vendor/sensio/framework-extra-bundle" />
+      <path value="$PROJECT_DIR$/zerobug/vendor/monolog/monolog" />
+      <path value="$PROJECT_DIR$/zerobug/vendor/egulias/email-validator" />
+      <path value="$PROJECT_DIR$/zerobug/vendor/nikic/php-parser" />
+      <path value="$PROJECT_DIR$/zerobug/vendor/twig/twig" />
+      <path value="$PROJECT_DIR$/zerobug/vendor/twig/extra-bundle" />
+      <path value="$PROJECT_DIR$/zerobug/vendor/webmozart/assert" />
+      <path value="$PROJECT_DIR$/zerobug/vendor/composer" />
+      <path value="$PROJECT_DIR$/zerobug/vendor/psr/container" />
+      <path value="$PROJECT_DIR$/zerobug/vendor/psr/cache" />
+      <path value="$PROJECT_DIR$/zerobug/vendor/laminas/laminas-code" />
+      <path value="$PROJECT_DIR$/zerobug/vendor/psr/log" />
+      <path value="$PROJECT_DIR$/zerobug/vendor/laminas/laminas-zendframework-bridge" />
+      <path value="$PROJECT_DIR$/zerobug/vendor/laminas/laminas-eventmanager" />
+      <path value="$PROJECT_DIR$/zerobug/vendor/symfony/config" />
+      <path value="$PROJECT_DIR$/zerobug/vendor/doctrine/inflector" />
+      <path value="$PROJECT_DIR$/zerobug/vendor/symfony/cache-contracts" />
+      <path value="$PROJECT_DIR$/zerobug/vendor/symfony/debug" />
+      <path value="$PROJECT_DIR$/zerobug/vendor/doctrine/doctrine-bundle" />
+      <path value="$PROJECT_DIR$/zerobug/vendor/symfony/console" />
+      <path value="$PROJECT_DIR$/zerobug/vendor/doctrine/doctrine-migrations-bundle" />
+      <path value="$PROJECT_DIR$/zerobug/vendor/symfony/error-handler" />
+      <path value="$PROJECT_DIR$/zerobug/vendor/phpdocumentor/reflection-docblock" />
+      <path value="$PROJECT_DIR$/zerobug/vendor/symfony/dependency-injection" />
+      <path value="$PROJECT_DIR$/zerobug/vendor/doctrine/orm" />
+      <path value="$PROJECT_DIR$/zerobug/vendor/symfony/event-dispatcher-contracts" />
+      <path value="$PROJECT_DIR$/zerobug/vendor/symfony/intl" />
+      <path value="$PROJECT_DIR$/zerobug/vendor/symfony/event-dispatcher" />
+      <path value="$PROJECT_DIR$/zerobug/vendor/symfony/finder" />
+      <path value="$PROJECT_DIR$/zerobug/vendor/symfony/filesystem" />
+      <path value="$PROJECT_DIR$/zerobug/vendor/symfony/property-access" />
+      <path value="$PROJECT_DIR$/zerobug/vendor/symfony/form" />
+      <path value="$PROJECT_DIR$/zerobug/vendor/symfony/http-client-contracts" />
+      <path value="$PROJECT_DIR$/zerobug/vendor/symfony/flex" />
+      <path value="$PROJECT_DIR$/zerobug/vendor/symfony/maker-bundle" />
+      <path value="$PROJECT_DIR$/zerobug/vendor/symfony/yaml" />
+      <path value="$PROJECT_DIR$/zerobug/vendor/symfony/http-kernel" />
+      <path value="$PROJECT_DIR$/zerobug/vendor/symfony/http-foundation" />
+      <path value="$PROJECT_DIR$/zerobug/vendor/symfony/expression-language" />
+      <path value="$PROJECT_DIR$/zerobug/vendor/symfony/doctrine-bridge" />
+      <path value="$PROJECT_DIR$/zerobug/vendor/symfony/polyfill-intl-idn" />
+      <path value="$PROJECT_DIR$/zerobug/vendor/symfony/mime" />
+      <path value="$PROJECT_DIR$/zerobug/vendor/symfony/proxy-manager-bridge" />
+      <path value="$PROJECT_DIR$/zerobug/vendor/symfony/security-guard" />
+      <path value="$PROJECT_DIR$/zerobug/vendor/symfony/polyfill-mbstring" />
+      <path value="$PROJECT_DIR$/zerobug/vendor/symfony/monolog-bridge" />
+      <path value="$PROJECT_DIR$/zerobug/vendor/symfony/polyfill-intl-normalizer" />
+      <path value="$PROJECT_DIR$/zerobug/vendor/symfony/property-info" />
+      <path value="$PROJECT_DIR$/zerobug/vendor/symfony/polyfill-php73" />
+      <path value="$PROJECT_DIR$/zerobug/vendor/symfony/cache" />
+      <path value="$PROJECT_DIR$/zerobug/vendor/symfony/polyfill-php72" />
+      <path value="$PROJECT_DIR$/zerobug/vendor/symfony/process" />
+      <path value="$PROJECT_DIR$/zerobug/vendor/symfony/routing" />
+      <path value="$PROJECT_DIR$/zerobug/vendor/symfony/polyfill-php80" />
+      <path value="$PROJECT_DIR$/zerobug/vendor/symfony/web-profiler-bundle" />
+      <path value="$PROJECT_DIR$/zerobug/vendor/symfony/stopwatch" />
+      <path value="$PROJECT_DIR$/zerobug/vendor/symfony/css-selector" />
+      <path value="$PROJECT_DIR$/zerobug/vendor/symfony/options-resolver" />
+      <path value="$PROJECT_DIR$/zerobug/vendor/symfony/service-contracts" />
+      <path value="$PROJECT_DIR$/zerobug/vendor/symfony/mailer" />
+      <path value="$PROJECT_DIR$/zerobug/vendor/symfony/var-exporter" />
+      <path value="$PROJECT_DIR$/zerobug/vendor/symfony/serializer" />
+      <path value="$PROJECT_DIR$/zerobug/vendor/symfony/var-dumper" />
+      <path value="$PROJECT_DIR$/zerobug/vendor/symfony/inflector" />
+      <path value="$PROJECT_DIR$/zerobug/vendor/symfony/web-link" />
+      <path value="$PROJECT_DIR$/zerobug/vendor/symfony/framework-bundle" />
+      <path value="$PROJECT_DIR$/zerobug/vendor/symfony/security-http" />
+      <path value="$PROJECT_DIR$/zerobug/vendor/symfony/security-bundle" />
+      <path value="$PROJECT_DIR$/zerobug/vendor/symfony/security-csrf" />
+      <path value="$PROJECT_DIR$/zerobug/vendor/symfony/dom-crawler" />
+      <path value="$PROJECT_DIR$/zerobug/vendor/symfony/polyfill-intl-icu" />
+      <path value="$PROJECT_DIR$/zerobug/vendor/symfony/browser-kit" />
+      <path value="$PROJECT_DIR$/zerobug/vendor/symfony/deprecation-contracts" />
+      <path value="$PROJECT_DIR$/zerobug/vendor/symfony/phpunit-bridge" />
+      <path value="$PROJECT_DIR$/zerobug/vendor/symfony/twig-bridge" />
+      <path value="$PROJECT_DIR$/zerobug/vendor/symfony/validator" />
+      <path value="$PROJECT_DIR$/zerobug/vendor/symfony/translation" />
+      <path value="$PROJECT_DIR$/zerobug/vendor/symfony/debug-bundle" />
+      <path value="$PROJECT_DIR$/zerobug/vendor/symfony/security-core" />
+      <path value="$PROJECT_DIR$/zerobug/vendor/symfony/web-server-bundle" />
+      <path value="$PROJECT_DIR$/zerobug/vendor/symfony/translation-contracts" />
+      <path value="$PROJECT_DIR$/zerobug/vendor/symfony/twig-bundle" />
+      <path value="$PROJECT_DIR$/zerobug/vendor/symfony/http-client" />
+      <path value="$PROJECT_DIR$/zerobug/vendor/symfony/monolog-bundle" />
+      <path value="$PROJECT_DIR$/zerobug/vendor/symfony/dotenv" />
+      <path value="$PROJECT_DIR$/zerobug/vendor/symfony/asset" />
+      <path value="$PROJECT_DIR$/zerobug/vendor/psr/link" />
+      <path value="$PROJECT_DIR$/zerobug/vendor/doctrine/cache" />
+      <path value="$PROJECT_DIR$/zerobug/vendor/doctrine/annotations" />
+      <path value="$PROJECT_DIR$/zerobug/vendor/doctrine/common" />
+      <path value="$PROJECT_DIR$/zerobug/vendor/doctrine/collections" />
+      <path value="$PROJECT_DIR$/zerobug/vendor/doctrine/event-manager" />
+      <path value="$PROJECT_DIR$/zerobug/vendor/doctrine/dbal" />
+      <path value="$PROJECT_DIR$/zerobug/vendor/doctrine/lexer" />
+      <path value="$PROJECT_DIR$/zerobug/vendor/doctrine/instantiator" />
+    </include_path>
+  </component>
+  <component name="ProjectId" id="1p8CTOraY6eTS29ZCMjEhreZKJp" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Majdi/zerobug" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\bechi\Bureau\PiDev\zerobug\templates" />
+      <recent name="C:\Users\bechi\Bureau\PiDev\zerobug\public" />
+      <recent name="C:\Users\bechi\Bureau\PiDev\zerobug\templates\livraison" />
+      <recent name="C:\Users\bechi\Bureau\PiDev\zerobug\templates\livreur" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="107fbfb0-dc69-43b5-8d10-e9e012b01b9e" name="Default Changelist" comment="" />
+      <created>1614555337720</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1614555337720</updated>
+      <workItem from="1614555338773" duration="37240000" />
+      <workItem from="1614713375100" duration="23628000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="499" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1614778048750">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="499" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.824@0.0.1536.824" timestamp="1614778048750" />
+    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1614789994951">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1614789994951" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1614622797281">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1614622797281" />
+  </component>
+</project>
