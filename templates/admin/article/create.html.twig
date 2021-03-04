@@ -1,0 +1,12 @@
+{% include 'admin/admin.html.twig' %}
+{% include 'admin/navbar.html.twig' %}
+{% include 'admin/sidebar.html.twig' %}
+{% block body %}
+    <div class="wrapper" style="padding-top: 50px" style="padding-left: 100px">
+    <div class="content-wrapper">
+        <h1 align="center">Ajouter un article </h1>
+        {{ form(form) }}
+    </div>
+    </div>
+
+{% endblock %}

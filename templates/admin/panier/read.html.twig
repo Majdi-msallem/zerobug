@@ -1,0 +1,35 @@
+{% include 'admin/admin.html.twig' %}
+{% include 'admin/navbar.html.twig' %}
+{% include 'admin/sidebar.html.twig' %}
+{% block body %}
+    <div class="wrapper" style="padding-top: 50px">
+        <div class="content-wrapper">
+
+            <h1 align="center"> La liste des paniers </h1>
+
+            <table class ="table">
+                <table class="table" border="1" >
+                    <tr align="center">
+                        <th>Id panier</th>
+                        <th>Id client</th>
+                        <th>Id article</th>
+                        <th>Total</th>
+                        <th align="center">Editer</th>
+                    </tr>
+                    {% for p in panier %}
+                        <tr align="center">
+                            <td>    {{ p.idpanier  }}     </td>
+                            <td>    {{ p.client.getId() }}    </td>
+                            <td>    {{ p.articles.getId() }}    </td>
+                            <td>    {{ p.total }}    </td>
+                            <td>
+                                <a href="{{ path('updatepanadmin',{'id':p.idpanier})  }}"> <button class="btn btn-primary"> modifier </button></a>
+                                <a href="{{ path('deletepanadmin',{'id':p.idpanier}) }}"> <button class="btn btn-danger"> supprimer </button></a>
+                            </td>
+                        </tr >
+                    {% endfor %}
+                </table>
+        </div>
+    </div>
+
+{% endblock %}

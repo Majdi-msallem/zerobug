@@ -1,0 +1,10 @@
+{% include 'admin/admin.html.twig' %}
+{% include 'admin/navbar.html.twig' %}
+{% include 'admin/sidebar.html.twig' %}
+{% block body %}
+    <div class="wrapper" style="padding-top: 100px" style="padding-left: 100px">
+        <div class="content-wrapper">
+            {{ form(form) }}
+        </div>
+    </div>
+{% endblock %}

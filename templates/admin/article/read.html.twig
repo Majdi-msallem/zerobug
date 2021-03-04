@@ -1,0 +1,41 @@
+{% include 'admin/admin.html.twig' %}
+{% include 'admin/navbar.html.twig' %}
+{% include 'admin/sidebar.html.twig' %}
+{% block body %}
+    <div class="wrapper" style="padding-top: 50px">
+        <div class="content-wrapper">
+
+    <h1 align="center"> La liste des articles </h1>
+
+    <table class ="table">
+        <table class="table" border="1" >
+            <tr>
+                <th>Id</th>
+                <th>Nom</th>
+                <th>Description</th>
+                <th>Prix</th>
+                <th>Categorie</th>
+                <th>Fabricant</th>
+                <th>Image_Article</th>
+                <th align="center">Editer</th>
+            </tr>
+            {% for a in article %}
+                <tr >
+                    <td>    {{ a.id  }}     </td>
+                    <td>    {{ a.nom }}    </td>
+                    <td>    {{ a.description }}    </td>
+                    <td>    {{ a.prix }}    </td>
+                    <td>    {{ a.categorie }}    </td>
+                    <td>    {{ a.fabricant }}    </td>
+                    <td>    {{ a.img }}    </td>
+                    <td>
+                        <a href="{{ path('updateartadmin',{'id':a.id}) }}"> <button class="btn btn-primary">modifier </button></a>
+                        <a href="{{ path('deleteartadmin',{'id':a.id}) }}"> <button class="btn btn-danger">supprimer </button></a>
+                    </td>
+                </tr >
+            {% endfor %}
+        </table>
+    </div>
+    </div>
+
+{% endblock %}
