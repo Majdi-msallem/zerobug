@@ -1,0 +1,49 @@
+
+{% include 'admin/navbar.html.twig' %}
+
+
+
+<div class="wrapper" style="padding-top: 70px">
+
+    <div class="content-wrapper">
+
+        <div class="container">
+            <div class="row">
+
+
+                <div class="col-md-12">
+                    <h4>Liste des réclamations</h4>
+                    <div class="table-responsive">
+
+
+                        <table id="mytable" class="table table-bordred table-striped">
+
+                            <thead>
+                            <th>Type</th>
+                            <th>Date</th>
+                            <th>Description</th>
+                            </thead>
+                            <tbody>
+
+                            {% for c in reclamation %}
+                                <tr>
+                                    <td>{{ c.type }}</td>
+                                    <td>{{ c.date_rec|date('Y-m-d') }}</td>
+                                    <td>{{ c.description }}</td>
+                                </tr>
+                            {% endfor %}
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+</div>
+{% include 'admin/sidebar.html.twig' %}
