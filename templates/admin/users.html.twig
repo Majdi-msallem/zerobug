@@ -1,0 +1,56 @@
+{% include 'admin/admin.html.twig' %}
+{% include 'admin/navbar.html.twig' %}
+{% block title %}Liste des utilisateurs{% endblock %}
+{% include 'admin/sidebar.html.twig' %}
+
+{% block body %}
+    <div class="wrapper">
+    <div class="content-wrapper">
+    <h1>Liste des utilisateurs</h1>
+
+
+        <table class="table">
+            <tr>
+                <th>ID</th>
+                <th>Email</th>
+                <th>Rôles</th>
+                <th>Actions</th>
+
+                <th align="center"></th>
+            </tr>
+            <tr {% for user in user %}>
+                <td>{{ user.id }}</td>
+                <td>{{ user.email }}</td>
+                <td>
+                    {# On boucle sur les rôles #}
+                    {% for role in user.roles %}
+                        {% if role == "ROLE_USER" %}
+                            Utilisateur
+                        {% elseif role == "ROLE_LIV" %}
+                            Livreur
+                        {% elseif role == "ROLE_ADMIN" %}
+                            Administrateur
+                        {% endif %}
+                    {% endfor %}
+                </td>
+
+                <td><a href="{{ path('admin_modifier_utilisateur', {'id': user.id}) }}"><button type="button" class="btn btn-warning">Modifier</button></a></td>
+                Modifier
+                <td><a href="{{ path('admin_supprimer_utilisateur', {'id': user.id}) }}"><button type="button" class="btn btn-danger">Supprimer</button></a></td>
+
+
+
+            </tr>
+
+            {% else %}
+                <p>Aucun utilisateur inscrit</p>
+            {% endfor %}
+            </tbody>
+        </table>
+
+        {% endblock %}
+    </div>
+    </div>
+
+
+

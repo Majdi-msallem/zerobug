@@ -1,0 +1,43 @@
+
+{% if is_granted('ROLE_ADMIN')  %}
+{% include 'admin/admin.html.twig' %}
+{% include 'admin/navbar.html.twig' %}
+{% include 'admin/sidebar.html.twig' %}
+{% endif %}
+
+
+{% block title %}Register{% endblock %}
+
+
+{% block body %}
+<div class="wrapper">
+    <div class="content-wrapper">
+    {% for flashError in app.flashes('verify_email_error') %}
+        <div class="alert alert-danger" role="alert">{{ flashError }}</div>
+    {% endfor %}
+
+    <h1>Register</h1>
+
+    {{ form_start(registrationForm) }}
+        {{ form_row(registrationForm.email) }}
+        {{ form_row(registrationForm.username) }}
+    {{ form_row(registrationForm.userphone) }}
+    {{ form_row(registrationForm.user_cin) }}
+    {{ form_row(registrationForm.useradress) }}
+    {{ form_row(registrationForm.birthday) }}
+    {{ form_row(registrationForm.userfirstname) }}
+    {{ form_row(registrationForm.userlastname) }}
+
+        {{ form_row(registrationForm.plainPassword, {
+            label: 'Password'
+        }) }}
+        {{ form_row(registrationForm.agreeTerms) }}
+
+
+
+        <button type="submit" class="btn">Register</button>
+        {{ form_end(registrationForm) }}
+
+    </div>
+</div>
+{% endblock %}
