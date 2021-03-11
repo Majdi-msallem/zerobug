@@ -39,13 +39,14 @@ class Client
     /**
      * @ORM\Column(type="integer")
      * @Assert\NotBlank()
+     * @Assert\Email(message = "The email '{{ value }}' is not a valid email.")
      */
     private $numtel;
 
     /**
-     * @ORM\ManyToOne(targetEntity=Article::class, inversedBy="clients")
+     * @ORM\OneToOne(targetEntity=Panier::class, cascade={"persist", "remove"})
      */
-    private $articles;
+    private $paniers;
 
         public function getId(): ?int
     {
@@ -100,20 +101,21 @@ class Client
         return $this;
     }
 
-    public function getArticles(): ?Article
-    {
-        return $this->articles;
-    }
-
-    public function setArticles(?Article $articles): self
-    {
-        $this->articles = $articles;
-
-        return $this;
-    }
     public function __toString()
     {
         return(string)$this->getNom();
+    }
+
+    public function getPaniers(): ?Panier
+    {
+        return $this->paniers;
+    }
+
+    public function setPaniers(?Panier $paniers): self
+    {
+        $this->paniers = $paniers;
+
+        return $this;
     }
 
 }

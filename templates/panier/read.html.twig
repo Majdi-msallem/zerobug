@@ -1,4 +1,4 @@
-{% include 'app/nav.html.twig' %}
+{% extends 'base.html.twig' %}
 
 {% block body %}
     <div class="shopping-cart section">
@@ -22,15 +22,19 @@
 
                         <tbody>
 
-                        {% set n = 1 %}
+
                         {% for a in panier %}
+                            {% set n = 1 %}
+                            {% for m in a.articles %}
                         <tr>
-                            <td class="image" data-title="No"><img src="{{ asset('images/'~a.articles.getImg()~'') }}" alt="#"></td>
+
+                            <td class="image" data-title="No"><img src="{{ asset('upload/'~m.img) }}" alt="#"></td>
+
                             <td class="product-des" data-title="Description">
-                                <p class="product-name"><a href="#">{{ a.articles.getNom()}}</a></p>
-                                <p class="product-des">{{ a.articles.getDescription() }}</p>
+                                <p class="product-name"><a href="#">{{ m.nom}}</a></p>
+                                <p class="product-des">{{ m.description }}</p>
                             </td>
-                            <td class="price" data-title="Price"><span id="prix{{n}}" neme="">{{ a.articles.getPrix() }} DT </span></td>
+                            <td class="price" data-title="Price"><span id="prix{{n}}" neme="">{{ m.prix }} DT </span></td>
                             <td class="qty" data-title="Qty"><!-- Input Order -->
                                 <div class="input-group">
                                     <div class="button minus">
@@ -47,10 +51,12 @@
                                 </div>
                                 <!--/ End Input Order -->
                             </td>
-                            <td class="total-amount" data-title="Total" name="result"><span id="result{{ n }}" > {{ a.articles.getPrix() }}</span></td>
-                            <td class="action" data-title="Remove"><a href="#"><i class="ti-trash remove-icon"></i></a></td>
+                            <td class="total-amount" data-title="Total" name="result"><span id="result{{ n }}" > {{ m.prix }}</span></td>
+                            <td class="action" data-title="Remove"><a href="{{ path('deletearticle',{'id':m.id}) }}"><i class="ti-trash remove-icon"></i></a></td>
                         </tr>
                             {% set n = n+1 %}
+                            {% endfor %}
+
                         {% endfor %}
 
                         </tbody>
@@ -90,7 +96,7 @@
 
                                     <div class="button5">
                                         <a href="#" class="btn">Commander</a>
-                                        <a href="{{ path('readarticle') }}" class="btn">Continuer le shopping</a>
+                                        <a href="{{ path('article') }}" class="btn">Continuer le shopping</a>
                                     </div>
                                 </div>
                             </div>
@@ -172,4 +178,3 @@
     <!-- Active JS -->
     <script src="js/active.js"></script>
 {% endblock %}
-{%  include 'app/footer.html.twig' %}

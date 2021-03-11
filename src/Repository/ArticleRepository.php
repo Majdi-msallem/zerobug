@@ -47,4 +47,12 @@ class ArticleRepository extends ServiceEntityRepository
         ;
     }
     */
+    public function SearchName($data)
+    {
+        return $this->createQueryBuilder('m')
+            ->where('m.nom LIKE :data')->orWhere('m.categorie Like :data ')->orWhere('m.fabricant Like :data ')
+            ->setParameter('data', '%'.$data.'%')
+            ->getQuery()->getResult()
+            ;
+    }
 }

@@ -114,6 +114,8 @@
       <path value="$PROJECT_DIR$/vendor/psr/log" />
       <path value="$PROJECT_DIR$/vendor/psr/cache" />
       <path value="$PROJECT_DIR$/vendor/symfony/web-server-bundle" />
+      <path value="$PROJECT_DIR$/vendor/knplabs/knp-components" />
+      <path value="$PROJECT_DIR$/vendor/knplabs/knp-paginator-bundle" />
     </include_path>
   </component>
   <component name="ProjectId" id="1p43AbCzwNXiK1Ot8aYeplbrSw6" />
@@ -124,7 +126,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$USER_HOME$/atelier4" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Desktop/Esprit/PI DEV/template" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="vue.rearranger.settings.migration" value="true" />
@@ -151,7 +153,11 @@
       <workItem from="1614708010003" duration="16438000" />
       <workItem from="1614726072925" duration="5956000" />
       <workItem from="1614774840182" duration="31227000" />
-      <workItem from="1614847267741" duration="12411000" />
+      <workItem from="1614847267741" duration="15352000" />
+      <workItem from="1615117621085" duration="35370000" />
+      <workItem from="1615224990570" duration="38333000" />
+      <workItem from="1615370229335" duration="28429000" />
+      <workItem from="1615456933643" duration="13142000" />
     </task>
     <servers />
   </component>
@@ -163,13 +169,29 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="413" y="118" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1614729128201" />
-    <state x="463" y="118" key="FileChooserDialogImpl" timestamp="1614713059440">
+    <state x="463" y="118" key="FileChooserDialogImpl" timestamp="1615227321489">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="463" y="118" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1614713059440" />
+    <state x="463" y="118" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1615227321489" />
     <state x="339" y="162" key="run.anything.popup" timestamp="1614719998396">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1614719998396" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/templates/article/Read.html.twig</url>
+          <line>140</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/templates/article/Read.html.twig</url>
+          <line>85</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

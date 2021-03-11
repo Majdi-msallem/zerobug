@@ -12,35 +12,27 @@ use Symfony\Component\Routing\Annotation\Route;
 class PanierController extends AbstractController
 {
     /**
-     * @Route("/panier", name="readpanier")
+     * @Route("/panier", name="panier")
      */
     public function readPanier()
     {
         $repo = $this->getDoctrine()->getRepository(Panier::class);
         $listPanier = $repo->findAll();
 
-        return $this->render('panier/read.html.twig', [
-            'panier' => $listPanier]);
+        return $this->render('panier/read.html.twig', array('panier' => $listPanier));
     }
 
     /**
-     * @Route("/panier/create", name="createpanier")
+     * @Route("/panier/ajouter{id}", name="createpanier")
      */
 
-    public function createPanier(Request $request)
+    public function createPanier ($id ,Request $request)
     {
-        $panier = new Panier();
-        $form = $this->createForm(PanierType::class);
-        $form->add('Ajouter', SubmitType::class);
-        $form->handleRequest($request);
-        if ($form->isSubmitted() && $form->isValid()) {
-            $em = $this->getDoctrine()->getManager();
-            $em->persist($panier);
-            $em->flush();
-            return $this->redirectToRoute(readpanier);
-        }
-        return $this->render('panier/base.html.twig', [
-            'form' => $form->createView()]);
+        $session=$request->getSession();
+        $panier =$session->get('panier',[]);
+        $panier[$id]=1;
+        $session->set('panier',$panier);
+        dd($session->get('panier'));
 
     }
 

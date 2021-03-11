@@ -1,0 +1,8 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+{% for a in article %}
+{{ a.nom}}
+    <img src="{{ asset('upload/'~a.img~'') }}" width="115" height="140" alt="#">
+{% endfor %}
+{% endblock %}
+

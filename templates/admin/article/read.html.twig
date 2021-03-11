@@ -27,10 +27,10 @@
                     <td>    {{ a.prix }}    </td>
                     <td>    {{ a.categorie }}    </td>
                     <td>    {{ a.fabricant }}    </td>
-                    <td>    {{ a.img }}    </td>
+                    <td> <img src="{{ asset('upload/'~a.img~'') }}" width="40px" height="40px">      </td>
                     <td>
-                        <a href="{{ path('updateartadmin',{'id':a.id}) }}"> <button class="btn btn-primary">modifier </button></a>
-                        <a href="{{ path('deleteartadmin',{'id':a.id}) }}"> <button class="btn btn-danger">supprimer </button></a>
+                        <a href="{{ path('updateartadmin',{'id':a.id}) }}"> modifier </a>
+                        <a href="{{ path('deleteartadmin',{'id':a.id}) }}"> supprimer </a>
                     </td>
                 </tr >
             {% endfor %}

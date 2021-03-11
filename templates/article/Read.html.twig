@@ -1,4 +1,4 @@
-{% include 'app/nav.html.twig' %}
+{% extends 'base.html.twig' %}
 
 {% block body %}
 
@@ -56,8 +56,8 @@
                         <div class="row">
                             <div class="col-lg-6 col-md-6 col-12">
                                 <div class="list-image overlay">
-                                    <img src="{{ asset('images/'~a.img~'') }}" alt="#">
-                                    <a href="#" class="buy"><i class="fa fa-eye"></i></a>
+                                    <img src="{{ asset('upload/'~a.img~'') }}" width="400px" height="400px">
+                                    <a href="{{ path('art',{'id':a.id}) }}" class="buy"><i class="fa fa-eye"></i></a>
                                 </div>
                             </div>
 
@@ -83,13 +83,13 @@
                          </div>
                      </div> -->
                     <!-- Start Single List  -->
-                    {% for a in article |slice (3,3) %}
+                    {% for a in article | slice(3,3) %}
                         <div class="single-list">
                             <div class="row">
                                 <div class="col-lg-6 col-md-6 col-12">
-                                    <div class="list-image overlay" >
-                                        <img src="{{ asset('images/'~a.img~'') }}"alt="#">
-                                        <a href="#" class="buy"><i class="fa fa-eye"></i></a>
+                                    <div class="list-image overlay">
+                                        <img src="{{ asset('upload/'~a.img~'') }}" alt="#">
+                                        <a href="{{ path('art',{'id':a.id}) }}" class="buy"><i class="fa fa-eye"></i></a>
                                     </div>
                                 </div>
 
@@ -115,13 +115,13 @@
                          </div>
                      </div> -->
                     <!-- Start Single List  -->
-                    {% for a in article |slice (6,3) %}
+                    {% for a in article | slice(6,3) %}
                         <div class="single-list">
                             <div class="row">
                                 <div class="col-lg-6 col-md-6 col-12">
                                     <div class="list-image overlay">
-                                        <img src="{{ asset('images/'~a.img~'') }}" alt="#">
-                                        <a href="#" class="buy"><i class="fa fa-eye"></i></a>
+                                        <img src="{{ asset('upload/'~a.img~'') }}" width="115" height="140" alt="#">
+                                        <a href="{{ path('art',{'id':a.id}) }}" class="buy"><i class="fa fa-eye"></i></a>
                                     </div>
                                 </div>
 
@@ -141,8 +141,11 @@
             </div>
         </div>
     </section>
+    <div class="navigation">
+        {{ knp_pagination_render(article) }}
+    </div>
+
     <!-- End Shop Home List  -->
 
 
 {% endblock %}
-{%  include 'app/footer.html.twig' %}

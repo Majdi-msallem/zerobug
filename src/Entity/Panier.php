@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use App\Repository\PanierRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
 
@@ -16,7 +18,7 @@ class Panier
      * @ORM\GeneratedValue
      * @ORM\Column(type="integer")
      */
-    private $idpanier;
+    private $id;
 
     /**
      * @ORM\Column(type="float")
@@ -30,13 +32,18 @@ class Panier
     private $client;
 
     /**
-     * @ORM\ManyToOne(targetEntity=Article::class, inversedBy="paniers")
+     * @ORM\ManyToMany(targetEntity=Article::class, mappedBy="paniers")
      */
     private $articles;
 
+    public function __construct()
+    {
+        $this->articles = new ArrayCollection();
+    }
+
     public function getIdpanier(): ?int
     {
-        return $this->idpanier;
+        return $this->id;
     }
 
     public function getTotal(): ?float
@@ -63,17 +70,40 @@ class Panier
         return $this;
     }
 
-    public function getArticles(): ?Article
+
+    public function __toString()
+    {
+        return(string)$this->getIdpanier();
+
+    }
+
+    /**
+     * @return Collection|Article[]
+     */
+    public function getArticles(): Collection
     {
         return $this->articles;
     }
 
-    public function setArticles(?Article $articles): self
+    public function addArticle(Article $article): self
     {
-        $this->articles = $articles;
+        if (!$this->articles->contains($article)) {
+            $this->articles[] = $article;
+            $article->addPanier($this);
+        }
 
         return $this;
     }
+
+    public function removeArticle(Article $article): self
+    {
+        if ($this->articles->removeElement($article)) {
+            $article->removePanier($this);
+        }
+
+        return $this;
+    }
+
 
 
 

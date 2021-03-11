@@ -7,6 +7,7 @@ use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
+use Symfony\Component\HttpFoundation\File\File;
 
 /**
  * @ORM\Entity(repositoryClass=ArticleRepository::class)
@@ -50,31 +51,28 @@ class Article
     private $fabricant;
 
     /**
-     * @ORM\OneToMany(targetEntity=Client::class, mappedBy="articles")
-     */
-    private $clients;
-
-    /**
      * @ORM\Column(type="string", length=255)
      * @Assert\NotBlank()
      */
     private $nom;
 
     /**
-     * @ORM\OneToMany(targetEntity=Panier::class, mappedBy="articles")
-     */
-    private $paniers;
-    /**
-     * @ORM\Column(type="string", length=255)
+     *  @var  string
+     * @ORM\Column(name="img",type="string", length=255)
      * @Assert\NotBlank()
      */
     private $img;
 
+    /**
+     * @ORM\ManyToMany(targetEntity=Panier::class, inversedBy="articles")
+     */
+    private $paniers;
+
     public function __construct()
     {
-        $this->clients = new ArrayCollection();
         $this->paniers = new ArrayCollection();
     }
+
 
     public function getId(): ?int
     {
@@ -141,36 +139,6 @@ class Article
         return $this;
     }
 
-    /**
-     * @return Collection|Client[]
-     */
-    public function getClients(): Collection
-    {
-        return $this->clients;
-    }
-
-    public function addClient(Client $client): self
-    {
-        if (!$this->clients->contains($client)) {
-            $this->clients[] = $client;
-            $client->setArticles($this);
-        }
-
-        return $this;
-    }
-
-    public function removeClient(Client $client): self
-    {
-        if ($this->clients->removeElement($client)) {
-            // set the owning side to null (unless already changed)
-            if ($client->getArticles() === $this) {
-                $client->setArticles(null);
-            }
-        }
-
-        return $this;
-    }
-
     public function getNom(): ?string
     {
         return $this->nom;
@@ -182,15 +150,27 @@ class Article
 
         return $this;
     }
+
+    /**
+     * @return string
+     */
     public function getImg(): ?string
     {
         return $this->img;
     }
+    /**
+     * @param string $img
+     */
 
-    public function setImg(string $img): self
+    public function setImg(string $img): void
     {
         $this->img = $img;
-        return $this;
+    }
+
+    public function __toString()
+    {
+        return(string)$this->getNom();
+
     }
 
     /**
@@ -205,7 +185,6 @@ class Article
     {
         if (!$this->paniers->contains($panier)) {
             $this->paniers[] = $panier;
-            $panier->setArticles($this);
         }
 
         return $this;
@@ -213,18 +192,12 @@ class Article
 
     public function removePanier(Panier $panier): self
     {
-        if ($this->paniers->removeElement($panier)) {
-            // set the owning side to null (unless already changed)
-            if ($panier->getArticles() === $this) {
-                $panier->setArticles(null);
-            }
-        }
+        $this->paniers->removeElement($panier);
 
         return $this;
     }
-    public function __toString()
-    {
-        return(string)$this->getNom();
-    }
+
+
+
 
 }
