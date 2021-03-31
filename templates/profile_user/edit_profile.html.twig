@@ -3,11 +3,23 @@
 {% block title %}Edit User{% endblock %}
 
 {% block body %}
-    {{ form_start(form) }}
-    {{ form_widget(form) }}
 
-    <button class="btn">{{ button_label|default('Save') }}</button>
-    {{ form_end(form) }}
+
+    <div class="row">
+        <div class="col-6 offset-3">
+            <div class="card bg-light">
+                <div class="card-body">
+                    <h1 class="text-center">Modifier votre profile</h1>
+                    {{ form_start(form) }}
+                    {{ form_widget(form) }}
+
+                    <button class="btn">{{ button_label|default('Update') }}</button>
+                    {{ form_end(form) }}
+                </div>
+            </div>
+        </div>
+    </div>
+
 
 
 
