@@ -1,0 +1,51 @@
+{% extends 'admin/admin.html.twig' %}
+
+{% block body %}
+
+<button type="button" class="btn btn-primary">
+  Nombre totales des utilisateur <span class="badge badge-light">{{ stat.counts }}</span>
+</button>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>name</th>
+                <th>genre</th>
+                <th>Email</th>
+                <th>Roles</th>
+
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for user in users %}
+            <tr>
+                <td>{{ user.id }}</td>
+                <td>{{ user.name }}</td>
+                <td>{{ user.genre }}</td>
+                <td>{{ user.email }}</td>
+                <td>
+                        {% for role in user.roles %}
+                            {% if role == "ROLE_USER" %}
+                                Utilisateur
+                            {% elseif role == "ROLE_ADMIN" %}
+                                Administrateur
+                            {% endif %}
+                        {% endfor %}
+</td>
+                <td>
+                    <button type="button" class="btn btn-info"><a href="{{ path('admin_user_show', {'id': user.id}) }}">afficher</a></button>
+                    <button type="button" class="btn btn-warning"><a href="{{ path('admin_user_edit', {'id': user.id}) }}">modifier</a></button>
+                    <button type="button" class="btn btn-danger"><a href="{{ path('admin_user_delete', {'id': user.id}) }}">supprimer</a></button>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="5">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+{% endblock %}

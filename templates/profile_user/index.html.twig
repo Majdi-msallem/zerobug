@@ -1,0 +1,47 @@
+{% extends 'base.html.twig' %}
+
+
+{% block body %}
+
+    <h4>Profile of {{ app.user.name }} </h4>
+<div class="content mt-3">
+    <div class="animated fadeIn">
+        <div class="row">
+
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header">
+<div class="grix xs container">
+        <table class="table table-dark">
+            <thead>
+            <tr>
+
+                <th scope="col">email</th>
+                <th scope="col">name</th>
+                <th scope="col">genre</th>
+                <th scope="col">cin</th>
+                <th scope="col">phone</th>
+                <th scope="col">action</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+
+                <td>{{ app.user.email }}</td>
+                <td>{{ app.user.name }}</td>
+                <td>{{ app.user.genre }}</td>
+                <td>{{ app.user.cin }}</td>
+                <td>{{ app.user.phone }}</td>
+                <td><a href="{{ path('update_user_profile' ,{'id':app.user.id})}}">Modifier Profil</a></td>
+            </tr>
+            </tbody>
+        </table>
+</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
